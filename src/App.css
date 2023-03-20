@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+.homepageWrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
+.formWrapper{
+  background: #282a36;
+  padding: 20px;
+  border-radius: 20px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 400px;
+  max-width: 90%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputGroup{
+  display: flex;
+  flex-direction: column;
 }
+.mainLabel{
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: cornflowerblue;
+}
+.inputBox{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+.joinbtn{
+  background-color: #4aed88 ;
+  width: 100px;
+  margin-left: auto;
+}
+.joinbtn:hover,.leavebtn:hover{
+  background-color: #72da73;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.info{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.newRoomBtn{
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3 ease-in-out;
+}
+.newRoomBtn:hover{
+  color: cornflowerblue;
+}
+.clientLists{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  
+}
+.Client{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bold;
 }
-
-.App-link {
-  color: #61dafb;
+.username{
+  margin-top: 10px;
 }
+.logoEditor{
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+  background: #868bac;
+  border-radius: 60px;
+  
+}
+.logoImgEditor{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 120px;
+  margin-top: 12px;
+  margin-left: 40px;
+}
+.leavebtn{
+  margin-top: 20px;
+  background: #4aed88;
+}
+.leavebtn:hover{
+  scale: 1.1;
+
 }

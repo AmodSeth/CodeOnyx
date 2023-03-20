@@ -1,0 +1,23 @@
+.editorPageWrapper{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    height: 100vh;
+}
+.leftWrapper{
+    background: #2d354b;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: calc(96vh);
+   
+}
+.sideNav{
+    flex: 1;
+
+  
+
+}
+.CodeMirror{
+    height: 100vh;
+}
