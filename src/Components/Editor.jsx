@@ -267,15 +267,16 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
     const editorRef = useRef(null);
     // const lang = useRecoilValue(language);
     // const editorTheme = useRecoilValue(cmtheme);
-    const editorTheme = "nord";
+    const editorTheme = 'lucario';
 
     useEffect(() => {
         async function init() {
             editorRef.current = Codemirror.fromTextArea(
                 document.getElementById('realtimeEditor'),
                 {
-                    // mode: { name: lang },
+                    mode:{name:'javascript',json:true},
                     theme: editorTheme,
+                    
                     autoCloseTags: true,
                     autoCloseBrackets: true,
                     lineNumbers: true,

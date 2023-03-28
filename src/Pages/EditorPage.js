@@ -155,7 +155,7 @@ const EditorPage = () => {
     socketRef.current.on(
         ACTIONS.DISCONNECTED,
         ({ socketId, username }) => {
-            toast.success(`${username} left the room.`);
+            toast.error(`${username} left the room.`);
             setClients((prev) => {
                 return prev.filter(
                     (client) => client.socketId !== socketId
@@ -175,11 +175,26 @@ return () => {
     
   }, []);
 
-  
 
   if (!location.state) {
     <Navigate to="/" />;
   }
+
+  async function copyRoomId() {
+    
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(roomId);
+      toast.success('Room ID has been copied to your clipboard');
+    }
+    else{
+      toast.error('Could not copy the Room ID');
+    }
+}
+  function leaveRoom() {
+    reactnavigator('/')
+  }
+  
+
 
   return (
     <div className="editorPageWrapper">
@@ -196,8 +211,8 @@ return () => {
           </div>
         </div>
         <PopupExample />
-        <button className="btn copybtn">Copy Room Id</button>
-        <button className="btn leavebtn"> Leave </button>
+        <button className="btn copybtn" onClick={copyRoomId}>Copy Room Id</button>
+        <button className="btn leavebtn" onClick={leaveRoom}> Leave </button>
       </div>
       <div className="rightWrapper">
         {/* <Editor lang={"python"} socketRef={socketRef} roomId={roomId} /> */}
